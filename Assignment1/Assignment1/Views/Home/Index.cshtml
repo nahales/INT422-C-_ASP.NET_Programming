@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>Assignment1</h2>
+    <p class="lead">This web app is built as an inventory management system for different types of phones. You can use this web app to:</p>
+    <ul>
+        <li>
+            Check the list of phones
+        </li>
+        <li>
+            Check details of phones' records
+        </li>
+        <li>
+            Add a new Phone to the system
+        </li>
+    </ul>
+    <p><a href="https://scs.senecac.on.ca/~wei.song/int422/assignments/INT422-Assignment1.html" class="btn btn-primary btn-lg" target="_blank">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h3>List of products</h3>
+        <p>You can see the list of Phones by clicking the button below.</p>
+        <p><a class="btn btn-default" @Html.ActionLink("List of Phones >>", "Index", "Phones")</a></p>
+    </div>
+    <div class="col-md-4">
+        <h3>Phone's Details</h3>
+        <p>You can select a phone and see its record by clicking Details.</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Phones' Details >>", "Index", "Phones")</a></p>
+    </div>
+    <div class="col-md-4">
+        <h3>Add Phones</h3>
+        <p>You can easily add a new phone's record in your system.</p>
+        <p><a class="btn btn-default" @Html.ActionLink("Add Phone >>", "Create", "Phones")</a></p>
+    </div>
+</div>

@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: Assignment1, Configuration: Debug Any CPU ------
+1>  Assignment1 -> C:\Users\nahal\OneDrive\Uni\INT422\Assignments\Assignment1\bin\Assignment1.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
