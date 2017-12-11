@@ -1,0 +1,42 @@
+﻿@model Assignment6.Controllers.PlaylistWithDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div>
+    <h2>Playlist Details <mark>@Html.DisplayFor(model => model.Name)</mark></h2>
+    <hr />
+    <p>
+        @Html.ActionLink("Back to List", "Index") |
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PlaylistId })
+    </p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt><br /></dt>
+        <dd><br /></dd>
+        <dt>
+            @Html.Raw("Tracks now on the playlist ")
+            <span class="badge">@Model.TracksCount</span>
+        </dt>
+        <dd>
+            @if (Model.TracksCount > 0)
+            {
+                foreach (var track in Model.Tracks)
+                {
+                    <span>@track.Name</span>
+                    <br />
+                }
+            }
+            else
+            {<span>The list is empty.<br /> Press 'Edit' to add song to this playlist.</span>}
+        </dd>
+    </dl>
+</div>
